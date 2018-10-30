@@ -5,7 +5,7 @@ In this repository, I will test various tutorials found on the web, most referen
 
 Each Release of the present repository, will match a tutorial found on the web
 
-In my work, you find zero docker image reference, either in `Dockerfile`, or in `./dokcer-compose.yml` files. 
+In my work, you find zero docker image reference, either in `Dockerfile`, or in `./docker-compose.yml` files. 
 It does matter : 
 * If I was to use `latest` tags, or any tag letting environement resolve to different versions, on differents days (What if you read this tutorial on 13 May 2020 ? And what will be tests results, if you run everything in here, on 13 May 2020? ...)
 * So I reference EVERY single artifact with **explicit** full version numbers, leaving no choice to dependency resolvers in the dependency manageemnt toolchain. And leaving you with no doubt on : 
