@@ -10,6 +10,7 @@ But essentially, they  gety their hands on their Recipe's Git repos.
 SecOps are monitored By  Chief Devops Officer (me) : Chief Devops Officer make them comply with rules, using good old CI/CD and user permissions classics.
 
 
-|  Date team applied recipe (When was executed that Recipe) | IAAC Recipe | Release TAG of Recipe (Which version was executed ?) | hyperlink to Tests results of Recipe's execution |
-| - | - | - | - |
-| `Tue Oct 30 13:19:37 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.2.1`](#) | [Tests results](#) of Recipe's execution |
+| Threat ID | Threat Registry ID |  Date team applied recipe (When was executed that Recipe) | IAAC Recipe | Release TAG of Recipe (Which version was executed ?) | hyperlink to Tests results of Recipe's execution |
+| - | - | - | - | - | - |
+| [`CVE-2006-1058`](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1058) | `CVE-MITRE` | `Tue Oct 30 13:19:37 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.2.1`](#) | [Tests results](#) of Recipe's execution |
+
