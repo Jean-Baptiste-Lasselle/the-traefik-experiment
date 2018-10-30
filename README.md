@@ -46,13 +46,8 @@ ccc
 
 Okay, now with that we share a more consistent view, let me give you my executive councelor's report : 
 Your oprgansiation must have at least one perso, responible of : 
-* Writing a first version a table, with two columns, looking like that : 
-| Threat Short name & Description | CVE MITRE Threat Reference | What you guys in security did, to protect us agnaist that |
-| - | - | - |
-| Rainbow tables, attacker able to retrieve our customers' passwords, though there're HASHED, but with no salt |  `75-BAD-0x-4558` | `Tue Oct 30 13:15:09 EDT 2018` => we applied [counter-measure 1](cccc) |
-
-
-
-* ccc
+* Managing a security team, every member of which will every day try and find a new security risk thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
+* Make security team write a first version of [that kind of table](ccc), for every new identified Security Risk 
+* Make security team with him comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](ccc) )
 
 
