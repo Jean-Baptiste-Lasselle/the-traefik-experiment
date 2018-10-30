@@ -44,9 +44,10 @@ ccc
   
   
 
-Okay, now with that we share a more consistent view, let me give you my executive councelor's report : 
-Your oprgansiation must have at least one perso, responible of : 
-* Managing a security team, every member of which will every day try and find a new security risk thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
+Okay, now with that we share a more consistent view, here is my councelor's report.
+
+Your oprgansiation must have at least one person, responible of : 
+* Every day try and find a match between [entries in a Security Risk Registry], and either a software living in our Company's Inormation System, or in any of the IT products we deliver to our customers, or freely to world. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
 * Make security team write a first version of [that kind of table](ccc), for every new identified Security Risk 
 * Make security team with him comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](ccc) )
 
