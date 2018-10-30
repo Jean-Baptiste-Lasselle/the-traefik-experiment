@@ -53,7 +53,7 @@ B - France is my country, I freely say anything about France, just as much as I 
 
 C - All in all, that leaves me with 324 minus one country, so 323 countries. Very much enough to me for IT work. Plus I love foreign languages, learning, and getting to know completely different people! :) 
 
-As simpe as DO-RE-MI, remember? :)
+As simple as DO-RE-MI, remember? :)
 
 Not to mention, I have learned pure Mathematics in France, very young, but I learned everything I know about Computer science, thanks to those 323 countries (comprared to Math courses I attended very young, FRench Computer Sciences teaching is very boring, and it's always funny to see those same French IT guys faces when they find out that I learned exactly what they have spent their lives saying they don't understand, and anyway is not applied to anything in life. 
 Too bad, Now I learned what you know, plus much more, and you still will never learn what I know. 
