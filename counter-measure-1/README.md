@@ -40,4 +40,21 @@ You just never knew.
 (Because one organization alone, cannot be a self sufficent reference, whoever runs it. Or especially thinking about who runs it, and why)
 
 * NIST (National Vulnerability Database) https://nvd.nist.gov/config/cce/index
-* And many more, search them in each country, and choose a combiantion of countries that really can't get along with each other. Add 7 more countries, and you pretty sure you'll get something like what some people put in place in Europe (known as "European Union")  : Something really easy to manage.
+* And many more, search them in each country, and choose a combiantion of countries that really can't get along with each other. Add 7 more countries (regisries), and you pretty sure you'll get something like what we have got in Europe, that some people put in place, against the vote of majority (known as "European Union")  : Something really easy to manage, like sheeps with dogs.
+
+
+#### Post Scriptum
+
+As to politics, I want to make it clear to every women and men I will work in the Future : 
+
+A - I will not under any circumstances, discuss politics if it is not about France, and France only.
+B - France is my country, I freely say anything about France, just as much as I do think, that if I travel, work in any foreign country, I will not explain to people how they should live, according to my own values or any opinion, mine or not. 
+C - All in all, that leaves me with 324 minus one country, so 323 countries. Very much enough to me for IT work. Plus I love foreign languages, learning, and getting to know completely different people! :) 
+
+Not to mention, I have learned pure Mathematics in France, very young, but I learned everything I know about Computer science, thanks to those 323 countries (comprared to Math courses I attended very young, FRench Computer Sciences teaching is very boring, and it's always funny to see those same French IT guys faces when they find out that I learned exactly what they have spent their lives saying they don't understand, and anyway is not applied to anything in life. 
+Too bad, Now I learned what you know, plus much more, and you still will never learn what I know. And earn more, because I make Executive Companies make a lot more money. So See u back in France.
+
+
+
+
+
