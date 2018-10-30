@@ -35,3 +35,9 @@ So yeah, It's just right here, Directly on Github, behind your door.
 You just never knew.
 
 
+# Other Risk Registries
+
+(Because one organization alone, cannot be a self sufficent reference, whoever runs it. Or especially thinking about who runs it, and why)
+
+* NIST (National Vulnerability Database) https://nvd.nist.gov/config/cce/index
+* And many more, search them in each country, and choose a combiantion of countries that really can't get along with each other. Add 7 more countries, and you pretty sure you'll get something like what some people put in place in Europe (known as "European Union")  : Something really easy to manage.
