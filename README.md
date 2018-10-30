@@ -43,17 +43,20 @@ ccc
   Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. Managing[ Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), wise Genrals get Victory.
 
 
-Okay, now with that we share a more consistent view, let me give you a peeek on what, concretely I deliver to my customers : 
+Okay, now with that we share a more consistent view, let me give you a peeek on what, concretely I deliver to my customers when it comes to global security strategy : 
 
-> Your oprgansiation must have at least one person, responible of : 
+> Your organisation must have at least one person, responible of : 
 >
 > * Every day try and find a match between [entries in a Security Risk Registry related to Rainbow tables](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1), and a pair `{A, B}`, where :
 >   * `A` is a software or software dependency. Like a plugin a library, all kinds of vocabulary varying from one software to the other. Pretty much anything that has a source code. 
 >   * `B` is a version number of `A`, and `A` is deployed to production (inside your Information System) in version `B`.
 > 
-> Bear in mind here, that I do recommend that you Security guys do that work, not only things that are TODAY delivered to customers, or deployed to production, but to things that WILL be delivered toyour customers, or deployed to production. Make them do that work on software at the earliest stage: when developers start commit & push source code to Git. There are plenty of tools making that possible today. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
-* Every week (frequency HAS to be changed, so you constantly adapt, like species / darwin) review the table, and assess Risk Management **improvement**, regarding Rainbow tables Security Risk. Again, what is important is not Assessing Risk Management on any given particular day. No, what is important is assessing Risk Management improvement, just like a physics sholar will explain you, that at any given instant, it does not matter what is your speed value is, what does matter is its derivative, acceleration. In IT, what matter far above **anything**, is time. Nothing else, but time. And accelration makes you earn time over your conccurrent. Time, remember that (I did think of course of good old [computability theorems], along with so many other things).
-* Eventually, you will demand Security team to comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1) ). Then you will unleash ISO 27 000 auditors on them.
+> Bear in mind here, that I do recommend that your Security guys do that work, not only on things that are TODAY delivered to customers, or deployed to production, but to things that WILL be delivered to your customers, or deployed to production, as well. 
+> 
+> Make them do that work on software at the earliest stage: when developers start commit & push source code to Git. There are plenty of tools making that possible today. New security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
+> * Every week review the tables, and assess Risk Management **improvement**, regarding Rainbow tables Security Risk. The per-week frequency HAS to be changed, so your company constantly adapt, like species do (Darwin).
+> > Again, what is important is not Assessing Risk Management on any given particular day. No, what is important is assessing Risk Management improvement, just like a physics sholar will explain you, that at any given instant, it does not matter what is your speed value is, what does matter is its derivative, acceleration. In IT, what matter far above **anything**, is time. Nothing else, but time. And accelration makes you earn time over your conccurrent. Time, remember that (I did think of course of good old [computability theorems], along with so many other things).
+> * Eventually, you will demand Security team to comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1) ). Then you will unleash ISO 27 000 auditors on them.
 
 
 
