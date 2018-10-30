@@ -47,7 +47,7 @@ Okay, now with that we share a more consistent view, let me give you a peeek on 
 
 > Your oprgansiation must have at least one person, responible of : 
 >
-> * Every day try and find a match between [entries in a Security Risk Registry realated to Rainbow tables](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1), and a pair `{A, B}`, where :
+> * Every day try and find a match between [entries in a Security Risk Registry related to Rainbow tables](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1), and a pair `{A, B}`, where :
 >   * `A` is a software or software dependency. Like a plugin a library, all kinds of vocabulary varying from one software to the other. Pretty much anything that has a source code. 
 >   * `B` is a version number of `A`, and `A` is deployed to production (inside your Information System) in version `B`.
 > 
