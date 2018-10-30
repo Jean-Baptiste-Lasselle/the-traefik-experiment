@@ -34,10 +34,12 @@ ccc
 #### Step 1 — Configuring and Running Traefik
 
 * To begin with, Digital Ocean's instructs us to secure Traefik's first user ' access. Here's how they propose doing that : 
-  * we choose a password, learn ity by heart, then use a software to encrypt it. Accurately, thsi encryption is a one-way cypher, called a HASH. One VERY important thing here, is this : Whatever technical means Digital Ocean will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manager security, not what means you use  on a given day. For exemple, things that are very important to understand there is :
+  * We choose a password, learn it by heart (Is there any difference to writing donw on a paper, or worst, in file... ? :o ). Then use a software to encrypt it. Accurately, this encryption is a one-way cypher, called a HASH. One VERY important thing here, is this : Whatever technical means Digital Ocean will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manage security, not what you did on one given aandom day. For exemple, things that are very important to understand there are :
   * What is hash / One way cyphering ?
-  * What are the threats / attacks / vulnerabilites that are managed by this practice of using hashed password
+  * What are the threats / attacks / vulnerabilites that are managed by this practice of using hashed password ?
   * And about Hashing passwords, I give the answer : A/ Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password B/ It is very important, as of today, to use Hash algorihtm that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people ahve a scale out platforma freely available.
+  
+  Managin threats, is what Greatest Generals do. Saying that you will destroy every existing threat around you  is singing ["M-i-c-k-e-y M-o-u-s-e"](ccc)
 
 Okay, now with that we share a more consistent view, let me give you my executive councelor's report : 
 Your oprgansiation must have at least one perso, responible of : 
