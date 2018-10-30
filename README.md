@@ -43,7 +43,7 @@ ccc
   Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. Managing[ Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), wise Genrals get Victory.
 
 
-Okay, now with that we share a more consistent view, let me give you a peeek on what, concretely I deliver to my customers when it comes to global security strategy : 
+Okay, now with that we share a more consistent view, let me give you a peek on what, concretely, I deliver to my customers when it comes to global security strategy : 
 
 > Your organisation must have at least one person, responible of : 
 >
