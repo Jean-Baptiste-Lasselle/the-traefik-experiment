@@ -25,3 +25,29 @@ So here I scan https://www.digitalocean.com/community/tutorials/how-to-use-traef
 
 Following this tutorial's instruction I :
 * skipped the installing Traefik on bare Ubuntu, and chose to use Traefik's official image, in a simple docker-compose environment. I therefore started with setting up that environment, and then transposed every single [Digital Ocean's tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-traefik-as-a-reverse-proxy-for-docker-containers-on-ubuntu-16-04) steps to that docker-compose environment 
+
+
+### Transposition of all tutorial's steps (Maestro, Let's start playing)
+
+ccc
+
+#### Step 1 — Configuring and Running Traefik
+
+* To begin with, Digital Ocean's instructs us to secure Traefik's first user ' access. Here's how they propose doing that : 
+  * we choose a password, learn ity by heart, then use a software to encrypt it. Accurately, thsi encryption is a one-way cypher, called a HASH. One VERY important thing here, is this : Whatever technical means Digital Ocean will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manager security, not what means you use  on a given day. For exemple, things that are very important to understand there is :
+  * What is hash / One way cyphering ?
+  * What are the threats / attacks / vulnerabilites that are managed by this practice of using hashed password
+  * And about Hashing passwords, I give the answer : A/ Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password B/ It is very important, as of today, to use Hash algorihtm that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people ahve a scale out platforma freely available.
+
+Okay, now with that we share a more consistent view, let me give you my executive councelor's report : 
+Your oprgansiation must have at least one perso, responible of : 
+* Writing a first version a table, with two columns, looking like that : 
+| Threat Short name & Description | CVE MITRE Threat Reference | What you guys in security did, to protect us agnaist that |
+| - | - | - |
+| Rainbow tables, attacker able to retrieve our customers' passwords, though there're HASHED, but with no salt |  `75-BAD-0x-4558` | `Tue Oct 30 13:15:09 EDT 2018` => we applied [counter-measure 1](cccc) |
+
+
+
+* ccc
+
+
