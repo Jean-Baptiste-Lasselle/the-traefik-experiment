@@ -47,8 +47,11 @@ ccc
 Okay, now with that we share a more consistent view, here is my councelor's report.
 
 Your oprgansiation must have at least one person, responible of : 
-* Every day try and find a match between [entries in a Security Risk Registry], and either a software living in our Company's Inormation System, or in any of the IT products we deliver to our customers, or freely to world. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
-* Make security team write a first version of [that kind of table](ccc), for every new identified Security Risk 
-* Make security team with him comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](ccc) )
+* Every day try and find a match between [entries in a Security Risk Registry realated to Rainbow tables](), and a pair `{A, B}`, where :
+  * `A` is a software or software dependency. Like a plugin a library, all kinds of vocabulary varying from one software to the other. Pretty much anything that has a source code. 
+  * `B` is a version number of `A`, and `A` is deployed to production (inside your Information System) in version `B`.
+Bear in mind here, that I do recommend that you Security guys do that work, not only things that are TODAY delivered to customers, or deployed to production, but to things that WILL be delivered toyour customers, or deployed to production. Make them do that work on software at the earliest stage: when developers start commit & push source code to Git. There are plenty of tools making that possible today. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
+* Every week review the table, and assess Risk Management **improvement**, regarding Rainbow tables Security Risk. Again, what is important is not Assessing Risk Management current level, what is important is assessing Risk Management improvement, just like a physics sholar will explain you, that at any given instant, it does not matter what is your speed value is, what does matter is its derivative, acceleration. In IT, what matter far above **anything**, is time. Nothing else, but time. And accelration makes you earn time over your conccurrent. Time, rmeber that.
+* Eventually, you will demand Security team to comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](ccc) )
 
 
