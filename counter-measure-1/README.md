@@ -16,7 +16,7 @@ SecOps are monitored By  Chief Devops Officer (me) : Chief Devops Officer make t
 | [`CVE-2006-1058`](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1058) | [`CVE-MITRE`](https://cve.mitre.org) | `Tue Oct 30 14:31:27 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.2.1`](#our-security-management-history-against-rainbow-tables-attacks) | [Tests results](#our-security-management-history-against-rainbow-tables-attacks) of Recipe's execution | We applied on our busybox docker images distribution inside our datacenter's marketplace |
 | [`CVE-2012-2565`](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2565) | [`Distributed Weakness Filing`](https://github.com/distributedweaknessfiling/DWF-Documentation) | `Tue Nov 17 10:22:02 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.8.1`](#our-security-management-history-against-rainbow-tables-attacks) | [Tests results](#our-security-management-history-against-rainbow-tables-attacks) of Recipe's execution | We upgraded our Bloxx Web Filtering Apppliances to 6.0.x , and  we made it forbidden to any dependency resolver (starting with docker and docker registries) to resolve Bloxx Web Filtering version to less or equal to `5.0.14`) | 
 
-
+Such a table acts as A primary key to retrieve all management history : Many more information may be then attached to each primary key, see this sample [Risk Management table](ccc) , made publicly avalilable on the web by [Queenland's Chief of Inforamtion Office](https://www.qgcio.qld.gov.au) , 
 
 
 
