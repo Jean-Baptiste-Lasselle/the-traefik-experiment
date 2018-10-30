@@ -7,7 +7,7 @@ To tell you all the truth, the present README.md, was generated, commited and pu
 After our SecOps toolchain generated, commited and pushed this `README.md`, our SecOps guys added a few more commits, to include miscellaneous complementary information, like Comments in the table below.
 But essentially, they  gety their hands on their Recipe's Git repos.
 
-SecOps are monitored By  Chief Devops Officer (me) : Chief Devops Officer make them comply with rules, using good old CI/CD and user permissions classics.
+SecOps are monitored By  Chief Devops Officer (me) : Chief Devops Officer (CDO) make them comply with rules, using good old CI/CD and user permissions classics. The rules he makes them comply with, are classic coding style, exapmple mandatory unit tests mapped to repo issues, plus architecture evolution monitoring involving CDO breaking down code and re-design deep architecture, propagated with SecOps framework updates.
 
 
 | Security Risk ID | Security Risk Registry ID |  Date team applied recipe (When was executed that Recipe) | IAAC Recipe | Release TAG of Recipe (Which version was executed ?) | hyperlink to Tests results of Recipe's execution | Comments |
