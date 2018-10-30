@@ -1,7 +1,7 @@
 # The Traefik Experiment
 _Let's run withcraft_
 
-In this repository, I will test various tutorials found on the web, most referenced by Traefik'officiel site.
+In this repository, I will test various tutorials found on the web, most referenced by Traefik's officiel website.
 
 Each Release of the present repository, will match a tutorial found on the web
 
