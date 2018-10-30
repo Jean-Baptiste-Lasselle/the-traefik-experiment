@@ -21,7 +21,7 @@ Such a table acts, in our Information System, as a primary key to retrieve all m
 Many more information may be then attached to each primary key, such as those you may read in see this sample [Risk Management table](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/raw/master/counter-measure-1/Sample-ISMS-Risk-Register.xlsx) I downloaded it on October 30 2018) 
 
 For that Sample Risk Management `xlsx` table (oh common, use Linux, please, as A CIO :o ... ), I must tell you that the Queenland's CIO did work on that xslx file, with a very clear goal : HE wants his service, Queenland's Information System, to be ISO 27000 - certified. That xlsx is what he will produce to certification auditors, among other things, so that they decide whether or not, they say OK, you are now officially certified, as a ISO-27 000 compliant Information System.
-Or its Queenland's CIO giving every Queenland's entrepreneur help to encourage them towoards ISO - 27 000 certification.
+Or its Queenland's CIO giving every Queenland's entrepreneur help to encourage them toxards ISO - 27 000 certification.
 
 
 
