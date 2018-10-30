@@ -11,7 +11,7 @@ SecOps are monitored By  Chief Devops Officer (me) : Chief Devops Officer make t
 
 
 | Threat ID | Threat Registry ID |  Date team applied recipe (When was executed that Recipe) | IAAC Recipe | Release TAG of Recipe (Which version was executed ?) | hyperlink to Tests results of Recipe's execution | Comments |
-| - | - | - | - | - | - |
+| - | - | - | - | - | - | - |
 | [`CVE-2006-1058`](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-1058) | `CVE-MITRE` | `Tue Oct 30 13:19:37 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.2.1`](#) | [Tests results](#) of Recipe's execution | We applied on our busybox docker images distribution inside our datacenter's marketplace |
 | [`CVE-2012-2565`](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-2565) | `CVE-MITRE` | `Tue Oct 30 13:19:37 EDT 2018` | [A working hyperlink to to your Recipe's URI (Not to Awesome Traefik's github repo :100: )](https://github.com/containous/traefik/wiki/Awesome-Traefik)  | [`0.8.1`](#) | [Tests results](#) of Recipe's execution | We upgraded our Bloxx Web Filtering Apppliances to 6.0.x , and  we made it forbidden to any dependency resolver (starting with docker and docker registries) to resolve Bloxx Web Filtering version to less or equal to `5.0.14`) | 
 
