@@ -25,3 +25,13 @@ Or its Queenland's CIO giving every Queenland's entrepreneur help to encourage t
 
 
 
+# The final Countdown
+
+Apart from a song I always found ridiculous, but in a sweet fashion, here is on image to make your Boss tell you "do it, NOW"  :
+
+![Do it Now](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/raw/master/counter-measure-1/Clipboard%20-%20October%2030%2C%202018%204_55%20PM.png)
+
+So yeah, It's just right here, Directly on Github, behind your door.
+You just never knew.
+
+
