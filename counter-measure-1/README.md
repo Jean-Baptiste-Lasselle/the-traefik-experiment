@@ -40,22 +40,22 @@ You just never knew.
 (Because one organization alone, cannot be a self sufficent reference, whoever runs it. Or especially thinking about who runs it, and why)
 
 * NIST (National Vulnerability Database) https://nvd.nist.gov/config/cce/index
-* And many more, search them in each country, and choose a combiantion of countries that really can't get along with each other. Add 7 more countries (regisries), and you pretty sure you'll get something like what we have got in Europe, that some people put in place, against the vote of majority (known as "European Union")  : Something really easy to manage, like sheeps with dogs.
+* And many more : Choose them in the list of country as long as possible, and choose a combination of countries that really can't get along with each other. In those countries, find Security Risk Registries. These will reference different attacks, if you look at Secruity Risk Registries like governements do. Add 7 more countries (sec risk registries), and you're pretty sure you'll end up with something like what we have got in Europe, which some people put in place, against the vote of majority (known as "European Union")  : Something really easy to manage, like sheeps with dogs.
 
 
 #### Post Scriptum
 
 As to politics, I want to make it clear to every women and men I will work in the Future : 
 
-A - I will not under any circumstances, discuss politics if it is not about France, and France only.
+A - I will not, under any circumstances, discuss politics at work, and if it is not work, even then I'll just discuss about French politics, and fell  not legitimate to discuss any other countries' politics. I'll do that with French Curtesy, using a refined french chef recipe, should it take a bottle of Taittinger Champagne.  
 
-B - France is my country, I freely say anything about France, just as much as I do think, that if I travel, work in any foreign country, I will not explain to people how they should live, according to my own values or any opinion, mine or not. 
+B - With that Taittinger Bottle, I'll sweetly explain France is my country, so I freely say anything about France, just as much as I do think, that if I travel, work, and live in any foreign country, I will not explain to people there how they should live. I will rather learn, how they live. Then after a cup or two, I'll make my new friends laugh, saying that anyway, if a customer that is not French, cares more about my personal opinions (about France) discussed at the pub, more than about his Kubernetes Clusters, then I seriously doubt he/she has serious IT projects. 
 
 C - All in all, that leaves me with 324 minus one country, so 323 countries. Very much enough to me for IT work. Plus I love foreign languages, learning, and getting to know completely different people! :) 
 
-As simple as DO-RE-MI, remember? :)
+As simple as DO-RE-MI, remember? 
 
-Not to mention, I have learned pure Mathematics in France, very young, but I learned everything I know about Computer science, thanks to those 323 countries (comprared to Math courses I attended very young, FRench Computer Sciences teaching is very boring, and it's always funny to see those same French IT guys faces when they find out that I learned exactly what they have spent their lives saying they don't understand, and anyway is not applied to anything in life. 
+Not to mention, I have learned pure Mathematics in France, very young, and in a very special context. But I learned everything I know about Computer science, thanks to those 323 countries (comprared to Math courses I attended very young, French Computer Sciences teaching was very boring, and it's always funny to see those same French IT guys faces when they find out that I learned all they know, plus much more, while they spent their lives saying they don't understand  th e math I do, and anyway those math are worthless in real life to society.
 Too bad, Now I learned what you know, plus much more, and you still will never learn what I know. 
 So See u back in France.
 
