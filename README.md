@@ -40,7 +40,7 @@ ccc
   * And about Hashing passwords, I give the answer : A/ Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password B/ It is very important, as of today, to use Hash algorihtm that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people ahve a scale out platforma freely available.
   
   Managing threats, is what Greatest Generals do. Saying that you will destroy every existing threat around you  is singing ["M-i-c-k-e-y M-o-u-s-e"](https://www.youtube.com/watch?v=PmILOL55xP0) :
-  Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. [Managing Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), wise Genrals get Victory.
+  Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. [Managing Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), and wise Generals get Victory.
 
 
 Okay, now with that we share a more consistent view, let me give you a peek on what, concretely, I deliver to my customers when it comes to global security strategy : 
