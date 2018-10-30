@@ -34,23 +34,24 @@ ccc
 #### Step 1 — Configuring and Running Traefik
 
 * To begin with, Digital Ocean's instructs us to secure Traefik's first user ' access. Here's how they propose doing that : 
-  * We choose a password, learn it by heart (Is there any difference to writing donw on a paper, or worst, in file... ? :o ). Then use a software to encrypt it. Accurately, this encryption is a one-way cypher, called a HASH. One VERY important thing here, is this : Whatever technical means Digital Ocean will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manage security, not what you did on one given aandom day. For exemple, things that are very important to understand there are :
+  * We choose a password, learn it by heart (Is there any difference to writing donw on a paper, or worst, in file... ? :o ). Then use a software to encrypt it. Accurately, this encryption is a one-way cypher, called a HASH. One VERY important thing here, is : Whatever technical means Digital Ocean (or anyone else) will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manage security, not what you did on one given random day. For example, things that are very important to understand there, are :
   * What is hash / One way cyphering ?
   * What are the threats / attacks / vulnerabilites that are managed by this practice of using hashed password ?
   * And about Hashing passwords, I give the answer : A/ Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password B/ It is very important, as of today, to use Hash algorihtm that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people ahve a scale out platforma freely available.
   
-  Managin threats, is what Greatest Generals do. Saying that you will destroy every existing threat around you  is singing ["M-i-c-k-e-y M-o-u-s-e"](https://www.youtube.com/watch?v=PmILOL55xP0) :
+  Managing threats, is what Greatest Generals do. Saying that you will destroy every existing threat around you  is singing ["M-i-c-k-e-y M-o-u-s-e"](https://www.youtube.com/watch?v=PmILOL55xP0) :
   Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. Managing[ Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), wise Genrals get Victory.
-  
-  
 
-Okay, now with that we share a more consistent view, here is my councelor's report.
 
-Your oprgansiation must have at least one person, responible of : 
-* Every day try and find a match between [entries in a Security Risk Registry realated to Rainbow tables](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1), and a pair `{A, B}`, where :
-  * `A` is a software or software dependency. Like a plugin a library, all kinds of vocabulary varying from one software to the other. Pretty much anything that has a source code. 
-  * `B` is a version number of `A`, and `A` is deployed to production (inside your Information System) in version `B`.
-Bear in mind here, that I do recommend that you Security guys do that work, not only things that are TODAY delivered to customers, or deployed to production, but to things that WILL be delivered toyour customers, or deployed to production. Make them do that work on software at the earliest stage: when developers start commit & push source code to Git. There are plenty of tools making that possible today. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
+Okay, now with that we share a more consistent view, let me give you a peeek on what, concretely I deliver to my customers : 
+
+> Your oprgansiation must have at least one person, responible of : 
+>
+> * Every day try and find a match between [entries in a Security Risk Registry realated to Rainbow tables](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1), and a pair `{A, B}`, where :
+>   * `A` is a software or software dependency. Like a plugin a library, all kinds of vocabulary varying from one software to the other. Pretty much anything that has a source code. 
+>   * `B` is a version number of `A`, and `A` is deployed to production (inside your Information System) in version `B`.
+> 
+> Bear in mind here, that I do recommend that you Security guys do that work, not only things that are TODAY delivered to customers, or deployed to production, but to things that WILL be delivered toyour customers, or deployed to production. Make them do that work on software at the earliest stage: when developers start commit & push source code to Git. There are plenty of tools making that possible today. snew security risk related to Rainbow Tables thrreatening the company Information System: Security Risk identification. Security Team members will use every single methodology they have learned atschool and at work, same with tools, to do dig up security risks everyday. 
 * Every week (frequency HAS to be changed, so you constantly adapt, like species / darwin) review the table, and assess Risk Management **improvement**, regarding Rainbow tables Security Risk. Again, what is important is not Assessing Risk Management on any given particular day. No, what is important is assessing Risk Management improvement, just like a physics sholar will explain you, that at any given instant, it does not matter what is your speed value is, what does matter is its derivative, acceleration. In IT, what matter far above **anything**, is time. Nothing else, but time. And accelration makes you earn time over your conccurrent. Time, remember that (I did think of course of good old [computability theorems], along with so many other things).
 * Eventually, you will demand Security team to comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Regisries], and devops-like systematic practices ([SecOPs](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1) ). Then you will unleash ISO 27 000 auditors on them.
 
