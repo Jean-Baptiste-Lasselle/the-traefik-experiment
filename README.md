@@ -1,5 +1,5 @@
 # The Traefik Experiment
-_Let's run withcraft_
+_Let's run witchcraft_
 
 In this repository, I will test various tutorials found on the web, most referenced by Traefik's officiel website.
 
