@@ -209,11 +209,11 @@ A few paragraphs above, I desribed an authentication processinvolving HASHed pas
 * So let's say this time Traefik generated the string `Xkt/S`, assuming SALT size is confgured to 5. 
 * Then, Traefik will append or prepend the SALT, to the clear password, like that : `mickeymouseXkt\S@`
 * Then, and only then, Traefik will use a software capable of hashing with SHA-512 algorithm, to hash `mickeymouseXkt\S@`. Traefik then gets a big long string that I will node as `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`
-* Traefik wil then store in database, not `$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`, but this exact value : 
+* Traefik will then store in its database, not `$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`, but this exact value : 
     ```bash
     $6$Xkt/S$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT
     ```
-     -> Note that the dollar `$` chracter is not in  the set [a-zA-Z0-9./]
+     -> Note that the dollar `$` chracter is **not** in  the set [a-zA-Z0-9./] (becasue it acts a a reserved word on salted hash standard formatn just as wqwell a you just cant name a Java Class Field `static`, or `void` ).
      -> The `6` between the first two dollars indicates that `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with SHA-512 algorithm. If the value had been `5`, then Traefik (or any software knowinfg about SALT standards ) knows `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with `SHA-256`. 
 * When my friend `tintin` will log on to Traefik, he will type his username and the password I gave him, that is to say `mickeymouse`. But let's say Tintin is a bit of a hit on girls so he was speaking with a georgous Brazilian Lady, and typed worng. He typed `ohmyisbrazilparadise?` (He is French, you know...) 
 * Traefik will lookup the database for the `tintin` username, and find the hashed password he has stored like cheese in the database. Reading that hashed passwords, and aware of the SALT standards, Traefik will read :
