@@ -196,7 +196,7 @@ eac315c3e0519f89b8ca39917f4a8ad3ad3380daf8173c9726d450c65d48bf9b85a3ddebf6c10aae
 Well now we know how to SHA-512 hash our passord. unfortunaltely, sha512sum utility did not use a SALT.
 To exactly understand how is the salt used, and what it is, we will have to go trhough the whole authentication process once more.
 
-A few paragraphs above, I desribed the process as such (replace Traefik by any software below, If you like) : 
+A few paragraphs above, I desribed an authentication processinvolving HASHed paswords, but no such thing as a SALT. A proper process taking in account SALT, will work as such (replace Traefik by any software name, below, If you like) : 
 * I am Adminsitrator of our Traefik instance, ad I want to create a new user, for a customer.
 * I login into Traefik, go to the Admin panel, section "Manage users".
 * I click the "add new user" button
@@ -208,11 +208,11 @@ A few paragraphs above, I desribed the process as such (replace Traefik by any s
 * Then, Traefik will append or prepend the SALT, to the clear password, like that : `mickeymouseXkt\S@`
 * Then, and only then, Traefik will use a software capable of hashing with SHA-512 algorithm, to hash `mickeymouseXkt\S@`. Traefik then gets a big long string that I will node as `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`
 * Traefik wil then store in database, not `$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`, but this exact value : 
-```bash
-$6$Xkt/S$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT
-```
- -> Note that the dollar `$` chracter is not in  the set [a-zA-Z0-9./]
- -> The `6` between the first two dollars indicates that `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with SHA-512 algorithm. If the value had been `5`, then Traefik (or any software knowinfg about SALT standards ) knows `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with `SHA-256`. 
+    ```bash
+    $6$Xkt/S$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT
+    ```
+     -> Note that the dollar `$` chracter is not in  the set [a-zA-Z0-9./]
+     -> The `6` between the first two dollars indicates that `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with SHA-512 algorithm. If the value had been `5`, then Traefik (or any software knowinfg about SALT standards ) knows `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with `SHA-256`. 
 * When my friend `tintin` will log on to Traefik, he will type his username and the password I gave him, that is to say `mickeymouse`. But let's say Tintin is a bit of a hit on girls so he was speaking with a georgous Brazilian Lady, and typed worng. He typed `ohmyisbrazilparadise?` (He is French, you know...) 
 * Traefik will lookup the database for the `tintin` username, and find the hashed password he has stored like cheese in the database. Reading that hashed passwords, and aware of the SALT standards, Traefik will read :
   * `$6$` (Traefik speaking) Oh, okay, so the passwords are HASHED with `SHA-512`
