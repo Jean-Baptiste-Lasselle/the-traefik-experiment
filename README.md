@@ -63,14 +63,59 @@ Now, let's check if Digital Ocean's suggestion complies with my requirements.
 sudo apt-get install apache2-utils
 
 # 2. et voici comment Digital Ocean propose de crypter notre mot de passe
+# Here is hwow Digital Ocean advises you to hash your paswords
 export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
 htpasswd -nb admin $VOTRE_CHOIX_DE_MOT_DE_PASSE
 
 # 3. 
 ```
-Maintenant, je vérifie en rechercahnt sur google, `How to SHA-512 with htpasswd` cc
+Okay, let's google, `How to SHA-512 with htpasswd` ... Ouch, I am afraid htpasswd does not support SHA-512, even worst, it does not even support SHA-256... Meaning idf Digital Ocean 's customer folow their instructions, well, let's say they are sheeps swiming in a room full of wolves.
+Let Digital Ocean deal with their customers, and get back to our customer.Right, So dgitial Ocean's htpasswd suggestion for securing Traefik: forget aboput it, let's find somethign better.
+Google again, and soon, you find Most Llinux distribution include utilities such as `sha512sum` , or `sha394sum` ... And there, we're talking about packages include in most respected Linux distributions, like Redhat's or OpenSUSE. And believe me, Redhat guys' tests are rock solid. Actually, Linux is Rock Solid.
+Those utilities are there because Redhat guys did the same security analysis as I just did, leading to the exact same unavoidable conclusion. You've ever heard about the `KISS` principle (I am think about coming out with a French KISS principle)? Well if you've never heard about it, just see it in action :
 
+```bash
+# 1. Digital Ocean advises use the htpasswd utility to create this encrypted password
+# `htpasswd` is in apache2-utils package
+sudo apt-get install apache2-utils
 
+# 2. et voici comment je recommanderai à mon client de hacher ses mots de passe.
+     And here is how I recommend my customer to HASH his Traefik users passwords : 
+export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
+sha512sum $VOTRE_CHOIX_DE_MOT_DE_PASSE
+```
+Guess what, ever came across an ISO file ? Well here is how you check an ISO's integrity, using its "footprint"  :
+* First you download the ISO file, say `your-iso-file.iso`, plus another small text file that extension like `*.SHA512`, say `your-iso-file.iso.sha512.sum` etc..
+
+```bash
+sha512sum your-iso-file.iso
+```
+Then the integrity test is OK iff the big string output by the above command, is exactly equal to the string in `your-iso-file.iso.sha512.sum`. Just a simple as that. And that a one way cyphering => you can't retrieve the actual `your-iso-file.iso`, neither from the string in `your-iso-file.iso.sha512.sum`, nor from the ouput string of the `sha512sum your-iso-file.iso`. Well you 'll tell me given file size, it wouldn't occu to your mind, totry and retrieve a full iso from a 3Ko texte file. Well I'll answer you that is just a size matter, and if yo had used RSA intead of SHA512, then yeah, you would have been able too, only difference would then be text file size, and complexity of converting text to binary (isn't that what constantly do with HTTP??).
+
+.. Or just let me quote CentoOS project's official documentation : 
+
+> Go to the directory where you downloaded the ISO in a command prompt and type:
+> 
+> sha256sum <name>.iso
+> 
+> Where <name> is the specific ISO you downloaded. For example in CentOS 6.5, for the minimal iso, it would be:
+> 
+> ```bash
+> [jhughes@jhughes x86_64]$ sha256sum CentOS-6.5-x86_64-minimal.iso
+> f9d84907d77df62017944cb23cab66305e94ee6ae6c1126415b81cc5e999bdd0  CentOS-6.5-x86_64-minimal.iso
+> ```
+> You would compare the hash received, in this case f9d84907d77df62017944cb23cab66305e94ee6ae6c1126415b81cc5e999bdd0, with the value in the file sha256sum.txt.asc. If it matches for CentOS-6.5-x86_64-minimal.iso, your iso download is good. 
+> 
+
+KISS => "Keep it simple and stupid".
+Oh, switching from htpsswd Apache utility made us grab another win for our customer : 
+Apache License is crap, Linux' is GNU GPL v2 licence, and so is `sha512sum`;
+Thank you Linux!
+Alright, lets Bourne again:
+
+```bourne
+ccc
+```
 
 
 
