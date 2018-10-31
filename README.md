@@ -48,7 +48,7 @@ Now Let's work with Jason legacy.
 
 _CHOOSING A PASSWORD_
 
-I'll choose `mickeymouse`, ( a very bad security choice), for the example
+I'll choose `mickeymouse`, a very bad security choice, for the sake of this example
 
 _CHOOSING A HASH ALGORITHM_
 
