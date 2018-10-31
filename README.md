@@ -52,8 +52,11 @@ I'll choose `mickeymouse`, a very bad security choice, for the sake of this exam
 
 _CHOOSING A HASH ALGORITHM_
 
-There it's just like at mall, you just have so many choice, it's dismaying... And that is where our one step higher discussion is useful (or merely saving our asses) :  We know how to choose it, it must be a salted one. Plus we will choose a reference, which will provide us with a reference over time. The refrence I'll choose is a standard, SSL/TLS's. We ARE NOT setting up SSL/TLS for Traefik provisioning, we are using a standard, to asses how strong our HASH algotrihtm is, compared to what is standard to some people (a few). Meaning if SSL/TLS considers a HASH Algorithm secure enough, I will consider that HASH algorithm secure enough for my customer. Actually, I'll push just a bit ahead: I'll alaways choose a HASH Algorithm STRICTLY STRONGER, than the weakest considered secure by SSL/TLS standard. I chose the SSL/TLS protocol as a reference, because SSL/TLS is massively used, so i trust it is massively tested (plus I checked that it is) and approved de facto.
+There it's just like at mall, you just have so many choice, it's dismaying... And that is where our one step higher discussion is useful (or merely saving our asses) :  We know how to choose it, it must be a salted one. Plus we will choose a reference, which will provide us with a reference over time. The refrence I'll choose is a standard, SSL/TLS's. We ARE NOT setting up SSL/TLS for Traefik provisioning, we are using a standard, to assess how strong our HASH algotrihtm is, compared to what is standard to some people (a few). 
+
+Meaning if SSL/TLS considers a HASH Algorithm secure enough, I will consider that HASH algorithm secure enough for my customer. Actually, I'll push just a bit ahead: I'll alaways choose a HASH Algorithm STRICTLY STRONGER, than the weakest considered secure by SSL/TLS standard. I chose the SSL/TLS protocol as a reference, because SSL/TLS is massively used, so i trust it is massively tested (plus I checked that it is) and approved de facto.
 Today, recommended SSL/TLS version is TLS v1.2. And TLS v1.2 requires at least SHA256 (meaning SHA 128 => no way, in your dreams), so I'll choose SHA 512, with SALT.
+
 This choice wil have to be reviewed once a month at least (if th he SecOps are not happy with that: Hey , guys, it just means checking if SSL/TLS standard has released a new version, and if so, finding in the docuement, which  is the weakest Algorithm considered secure... 2 hours a month on worst case, including updating ISO 27 000 reports that I automated in the SecOps Framework...!)
 Now, let's check if Digital Ocean's suggestion complies with my requirements.
 
@@ -108,10 +111,12 @@ Then the integrity test is OK iff the big string output by the above command, is
 > 
 
 KISS => "Keep it simple and stupid".
-Oh, switching from htpsswd Apache utility made us grab another win for our customer : 
-Apache License is crap, Linux' is GNU GPL v2 licence, and so is `sha512sum`;
-Thank you Linux!
-Alright, lets Bourne again:
+Oh, switching from htpsswd Apache utility made us grab two additional wins for our customer : 
+* WIN 1 Apache License is crap, Linux' is GNU GPL v2 licence, and so is `sha512sum`;
+* WIN 2 we have one less dependency in our infrastructure (the less, the better)
+Thank you All Linux/UNIX Community around the world for 60 years!
+
+Alright, lets Bourne back:
 
 ```bourne
 ccc
