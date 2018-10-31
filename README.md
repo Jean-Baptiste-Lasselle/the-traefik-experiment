@@ -119,12 +119,70 @@ Thank you All Linux/UNIX Community around the world for 60 years!
 Alright, lets Bourne back:
 
 ```bourne
-ccc
+[jbl@pc-100 ~]$ sha512sum mickeymouse
+sha512sum: mickeymouse: No such file or directory
+[jbl@pc-100 ~]$ 
+
 ```
 
+Hum? `no such file or directory?` Oh yeah, I understand : the `sha512sum` software is expecting a file, not a text stream from the standard input... How are we gong to ask `sha512sum` we're not giving him a file path, but the string to hash, on its standard input? Lets' `--help` :
 
+```bash
+[jbl@pc-100 ~]$ sha512sum --help
+Usage: sha512sum [OPTION]... [FILE]...
+Print or check SHA512 (512-bit) checksums.
+With no FILE, or when FILE is -, read standard input.
 
+  -b, --binary         read in binary mode
+  -c, --check          read SHA512 sums from the FILEs and check them
+      --tag            create a BSD-style checksum
+  -t, --text           read in text mode (default)
+  Note: There is no difference between binary and text mode option on GNU system.
 
+The following four options are useful only when verifying checksums:
+      --quiet          don't print OK for each successfully verified file
+      --status         don't output anything, status code shows success
+      --strict         exit non-zero for improperly formatted checksum lines
+  -w, --warn           warn about improperly formatted checksum lines
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+The sums are computed as described in FIPS-180-2.  When checking, the input
+should be a former output of this program.  The default mode is to print
+a line with checksum, a character indicating input mode ('*' for binary,
+space for text), and name for each FILE.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+For complete documentation, run: info coreutils 'sha512sum invocation'
+
+```
+There we are : we must use the `--text` option, or `-t` for short :
+```bourne
+[jbl@pc-100 ~]$ sha512sum -t mickeymouse
+sha512sum: mickeymouse: No such file or directory
+[jbl@pc-100 ~]$ 
+
+```
+Humpf? => Ah, I understand now : `sha512sum` will accept text to HASH, but only from a file. 
+K, let's try that :
+```bourne
+export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
+echo "$VOTRE_CHOIX_DE_MOT_DE_PASSE"^>> ./please-sha512sum-software-hash-my-mickey.txt
+sha512sum -t ./please-sha512sum-software-hash-my-mickey.txt
+```
+Yeaaaah! [ We win!](https://www.youtube.com/watch?v=B_dX0Nei538) (:Full Matel Jacket-Soundtrack - Surfin' Bird:)
+```bourne
+[jibl@pc-100 ~]$ export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
+[jibl@pc-100 ~]$ echo "$VOTRE_CHOIX_DE_MOT_DE_PASSE"^>> ./please-sha512sum-software-hash-my-mickey.txt
+[jibl@pc-100 ~]$ sha512sum -t ./please-sha512sum-software-hash-my-mickey.txt
+eac315c3e0519f89b8ca39917f4a8ad3ad3380daf8173c9726d450c65d48bf9b85a3ddebf6c10aae32e8aba5a3b6ec6dcfe9bf33ca09a0904e875d4d10274ec0  ./please-sha512sum-software-hash-my-mickey.txt
+[jibl@pc-100 ~]$ 
+```
+(=> Ouh, and isn't that code we can write in a file, and .. version?? :) )
+Alright, now let's just be clear about what's gonna happen to that hash : 
+
+Its gonna be stored in Traefik user DAtabase, and when I will try and login with my username, to Traefik, then i'll type `mickeymouse`. Then traefik will HASH the string I typed, `mickeymouse`, using the SHA-512 algorithm. Finally, Traefik will compare the result with the hash previously stored in database: if they are equal, Traefik lets me in, if not, Traefik leaves me sorry wtaring at home page.
 
 
 
