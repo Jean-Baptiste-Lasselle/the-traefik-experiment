@@ -38,13 +38,45 @@ ccc
   * Then use a software to encrypt it. Accurately, this encryption is a one-way cypher, called a HASH. One VERY important thing here, is : Whatever technical means Digital Ocean (or anyone else) will propose, it will have ZERO VALUE in terms of security. Because what matters in security, is how you manage security, not what you did on one given random day. For example, things that are very important to understand there, are :
   * What is hash / One way cyphering ?
   * What are the threats / attacks / vulnerabilites that are managed by this practice of using hashed password ?
-  * And about Hashing passwords, I give the answer : A/ Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password B/ It is very important, as of today, to use Hash algorihtm that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people ahve a scale out platforma freely available.
-  
+  * And about Hashing passwords, Let me give the answers : 
+    A - Hashing your passwords will protect you against the attacker that gets his hands on the database storing your customers usernames and password 
+    B - It is very important, as of today (2018), to use Hash algorihtms that use SALT, because SALTED HASHED passwords, will protect you against a very well known, and harmful attack, called `Rainbow tables`. Especially in those Kubernetes days, where many more people have access to a scale out platforma freely available. Hackers able to spin up a proper Kubernetes and take advantage its scale out power, arelike 10 in the world today (o we know exactly who they are and they know we know), but that will drastically change in 4 to 5 years.
+
+Before diving into Bourne again shell, and for the reader who really needs to know what he is doing, and why, I want to invite you to the [ANNEX A. Security: one step higher](#security-one-step-higher) section, a the bootom of the present `README.md` . And also because I like to think that Great Ideas directly come from the very earth ground (Remember what they told Einstein? "You bro really a bit of a dim wit, just take care of the clocks and be a goodboy, okay?" Albert : "Okay."). 
+
+Now Let's work with Jason legacy.
+
+_CHOOSING A PASSWORD_
+
+I'll choose `mickeymouse`, ( a very bad security choice), for the example
+
+_CHOOSING A HASH ALGORITHM_
+
+There it's just like at mall, you just have so many choice, it's dismaying... And that is where our one step higher discussion is useful (or merely saving our asses) :  We know how to choose it, it must be a salted one. Plus we will choose a refrence, meaning if SSL/TLS considers a HASH Algorithm seciure enough, I will consider that HASH algorithm secure enough. Actually, I'll push just a bit ahead: I'll alaways choose a HAS Algorithm STRICTLY STRONGER, than the weakest considered secure by SSL/TLS standard. I chose the SSL/TLS protocol as a reference, because SSL/TLS is mmassibvely use, so i trust it is massively tested (plus I checked that it is).
+Okay, today, recommended SSL/TLS version is TLS v1.2. And TLS v1.2 requires at least SHA256 (meaning SHA 128 => no way, in your dreams), so I'll choose SHA 512, with SALT.
+And this choice wil have to be reviewed once a month at least (if th he SecOps are not happy with that: Hey , guys, it just means checking if SSL/TLS standard has released a new version, and if so, finding in the docuement, which  is the weakest Algorithm considered secure... 2 hours a month on worst case, including updating ISO 27 000 reports that I automated in the SecOps Framework...!)
+
+
+
+
+
+
+
+
+
+
+
+
+
+# ANNEX A. Security: one step higher
+
+## A 4 lines sum-up of how leaders deal with security risks 
+
   Managing threats, is what Greatest Generals do. Saying that you will destroy every existing threat around you  is singing ["M-i-c-k-e-y M-o-u-s-e"](https://www.youtube.com/watch?v=PmILOL55xP0) :
-  Come to terms with it, there is no zero threats security zone anywhere in the world, even in your president's office, or in your King's Bed. [Managing Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), and wise Generals get Victory.
+  Come to terms with it, there is no zero threats security zone anywhere in the world, shoudl it be in your President's office, or in your Queen's Bed. [Managing Threats is wise](https://en.wikipedia.org/wiki/ISO/IEC_27001), and wise Generals get Victory.
 
+## A peek on what I concretely deliver to my customers when it comes to global security strategy
 
-Okay, now with that we share a more consistent view, let me give you a peek on what, concretely, I deliver to my customers when it comes to global security strategy : 
 
 > Your organisation must have at least one person, responible of : 
 >
@@ -59,6 +91,13 @@ Okay, now with that we share a more consistent view, let me give you a peek on w
 > > Again, what is important is not Assessing Risk Management on any given particular day. No, what is important is assessing Risk Management improvement, just like a physics scholar will explain you, that at any given instant, it does not matter what your speed value is, what does matter is its derivative, the acceleration. In IT, what matter far above **anything**, is time. Nothing else, but time. And acceleration makes you earn time over your conccurrent. 
 > * Eventually, you will demand Security team to comply with an ISO 27 000 kind of review cycle on every identified risk, using [Security Risks Registries], and devops-like systematic practices ([SecOps](https://github.com/Jean-Baptiste-Lasselle/the-traefik-experiment/tree/master/counter-measure-1) ). Then you will unleash ISO 27 000 auditors on them.
 
-Just between the two of us (you, Github reader), I'll even add :
-Time, remember that (I did think of course of good old [computability theorems], along with so many other things).
+Just between the two of us (you, dear reader), I'll add :
+Time, is what matters, remember that (of course I alsothought of good old [computability theorems], along with so many other things).
+
+
+
+
+
+
+
 
