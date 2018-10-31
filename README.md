@@ -224,14 +224,16 @@ $6$Xkt/S$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT
 * So traefik will kick out my friend tintin
 * Do I need to eplain what will happen if `tintin` typed the correct password?
 
-All in all, ifou work about that authentication / crypto lifecycle, you will then come the same conculsion as mine :
-* we dont need anything else than `sha512sum`, to generate ourselfves ONE (one is very important here) legitimate Traefik user passwords.
+All in all, if you work about a bit that authentication / crypto lifecycle, you will then come the same conculsion as mine :
+* we dont need anything else than `sha512sum`, to generate ourselfves ONE (one is very important here) legitimate Traefik user password.
 * we only need to pre-pend `$6$` and use any string that has same size has the size of the salt generated in Digital Ocean's Tutorial (if it works for them, it will work for us)
 * Okay let's do that, and bear in mind : If we were to generate a whole set of users, using only `sha512sum` utility, we would also need a random string generator. Choosing a good string randomizer is another issue we will have to review in our weekly/monthly ISO 27 000 review meeting.
+* I may even give you one kind of good string randomizer, you can use with electricity :  pick a book, any book. open the book at any page. In the right side page, choose the first letter of the 7 th word of the second line in page. Do that again as many times as you need new characters. So 5 times in our case. I'll dot hat with a book tomorrow morining, and will we see I I can crack Traefik's authentication with a good old book.  
 
 (Oh damn, I dying to try that tomorrow morning)
 
 Let me quote something I found in Brazilian discussion feed (I think I like Brazil ... ) : 
+
 > 
 > salt is a character string starting with the characters "$id$" followed by a string terminated by "$":
 > 
