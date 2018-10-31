@@ -80,7 +80,7 @@ Those utilities are there because Redhat guys did the same security analysis as 
 sudo apt-get install apache2-utils
 
 # 2. et voici comment je recommanderai à mon client de hacher ses mots de passe.
-     And here is how I recommend my customer to HASH his Traefik users passwords : 
+#     And here is how I recommend my customer to HASH his Traefik users passwords : 
 export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
 sha512sum $VOTRE_CHOIX_DE_MOT_DE_PASSE
 ```
