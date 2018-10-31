@@ -48,7 +48,7 @@ You just never knew.
 
 As to politics, I want to make it clear to every women and men I will work in the Future : 
 
-A - I will not, under any circumstances, discuss politics at work, and if it is not work, even then I'll just discuss about French politics, and fell  not legitimate to discuss any other countries' politics. I'll do that with French Curtesy, using a refined french chef recipe, should it take a bottle of Taittinger Champagne.  
+A - I will not, under any circumstances, discuss politics at work, and if it is not work, even then I'll just discuss about French politics, and feel  not legitimate to discuss any other countries' politics. I'll do that with French Curtesy, using a refined french chef recipe, should it take a bottle of Taittinger Champagne.  
 
 B - With that Taittinger Bottle, I'll sweetly explain France is my country, so I freely say anything about France, just as much as I do think, that if I travel, work, and live in any foreign country, I will not explain to people there how they should live. I will rather learn, how they live. Then after a cup or two, I'll make my new friends laugh, saying that anyway, if a customer that is not French, cares more about my personal opinions (about France) discussed at the pub, more than about his Kubernetes Clusters, then I seriously doubt he/she has serious IT projects. 
 
