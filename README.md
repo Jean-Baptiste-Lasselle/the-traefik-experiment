@@ -171,7 +171,7 @@ export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
 echo "$VOTRE_CHOIX_DE_MOT_DE_PASSE"^>> ./please-sha512sum-software-hash-my-mickey.txt
 sha512sum -t ./please-sha512sum-software-hash-my-mickey.txt
 ```
-Yeaaaah! [ We win!](https://www.youtube.com/watch?v=B_dX0Nei538) (:Full Matel Jacket-Soundtrack - Surfin' Bird:)
+Yeaaaah! [ We win!](https://www.youtube.com/watch?v=B_dX0Nei538) (:Full Metal Jacket-Soundtrack - Surfin' Bird:)
 ```bourne
 [jbl@pc-100 ~]$ export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
 [jbl@pc-100 ~]$ echo "$VOTRE_CHOIX_DE_MOT_DE_PASSE"^>> ./please-sha512sum-software-hash-my-mickey.txt
