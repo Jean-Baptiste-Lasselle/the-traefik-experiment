@@ -44,7 +44,7 @@ ccc
 
 Before diving into Bourne again shell, and for the reader who really needs to know what he is doing, and why, I want to invite you to the [ANNEX A. Security: one step higher](#security-one-step-higher) section, a the bootom of the present `README.md` . And also because I like to think that Great Ideas directly come from the very earth ground (Remember what they told Einstein? "You bro really a bit of a dim wit, just take care of the clocks and be a goodboy, okay?" Albert : "Okay."). 
 
-Now Let's work with Jason legacy.
+Now Let's work with The Jason Legacy.
 
 _CHOOSING A PASSWORD_
 
@@ -52,9 +52,23 @@ I'll choose `mickeymouse`, a very bad security choice, for the sake of this exam
 
 _CHOOSING A HASH ALGORITHM_
 
-There it's just like at mall, you just have so many choice, it's dismaying... And that is where our one step higher discussion is useful (or merely saving our asses) :  We know how to choose it, it must be a salted one. Plus we will choose a refrence, meaning if SSL/TLS considers a HASH Algorithm seciure enough, I will consider that HASH algorithm secure enough. Actually, I'll push just a bit ahead: I'll alaways choose a HAS Algorithm STRICTLY STRONGER, than the weakest considered secure by SSL/TLS standard. I chose the SSL/TLS protocol as a reference, because SSL/TLS is mmassibvely use, so i trust it is massively tested (plus I checked that it is).
-Okay, today, recommended SSL/TLS version is TLS v1.2. And TLS v1.2 requires at least SHA256 (meaning SHA 128 => no way, in your dreams), so I'll choose SHA 512, with SALT.
-And this choice wil have to be reviewed once a month at least (if th he SecOps are not happy with that: Hey , guys, it just means checking if SSL/TLS standard has released a new version, and if so, finding in the docuement, which  is the weakest Algorithm considered secure... 2 hours a month on worst case, including updating ISO 27 000 reports that I automated in the SecOps Framework...!)
+There it's just like at mall, you just have so many choice, it's dismaying... And that is where our one step higher discussion is useful (or merely saving our asses) :  We know how to choose it, it must be a salted one. Plus we will choose a reference, which will provide us with a reference over time. The refrence I'll choose is a standard, SSL/TLS's. We ARE NOT setting up SSL/TLS for Traefik provisioning, we are using a standard, to asses how strong our HASH algotrihtm is, compared to what is standard to some people (a few). Meaning if SSL/TLS considers a HASH Algorithm secure enough, I will consider that HASH algorithm secure enough for my customer. Actually, I'll push just a bit ahead: I'll alaways choose a HASH Algorithm STRICTLY STRONGER, than the weakest considered secure by SSL/TLS standard. I chose the SSL/TLS protocol as a reference, because SSL/TLS is massively used, so i trust it is massively tested (plus I checked that it is) and approved de facto.
+Today, recommended SSL/TLS version is TLS v1.2. And TLS v1.2 requires at least SHA256 (meaning SHA 128 => no way, in your dreams), so I'll choose SHA 512, with SALT.
+This choice wil have to be reviewed once a month at least (if th he SecOps are not happy with that: Hey , guys, it just means checking if SSL/TLS standard has released a new version, and if so, finding in the docuement, which  is the weakest Algorithm considered secure... 2 hours a month on worst case, including updating ISO 27 000 reports that I automated in the SecOps Framework...!)
+Now, let's check if Digital Ocean's suggestion complies with my requirements.
+
+```bash
+# 1. Digital Ocean advises use the htpasswd utility to create this encrypted password
+# `htpasswd` is in apache2-utils package
+sudo apt-get install apache2-utils
+
+# 2. et voici comment Digital Ocean propose de crypter notre mot de passe
+export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
+htpasswd -nb admin $VOTRE_CHOIX_DE_MOT_DE_PASSE
+
+# 3. 
+```
+Maintenant, je vérifie en rechercahnt sur google, `How to SHA-512 with htpasswd` cc
 
 
 
