@@ -60,7 +60,7 @@ Not to mention, I have learned pure Mathematics in France, very young, and in a 
 Too bad, Now I learned what you know, plus much more, and you still will never learn what I know. 
 So See u back in France.
 
-As a ground example, I leearned everything about PXE booting, out of a 6 hours youtube video from an Indian man. The sound was so low quality, I had to first spend 3 days transcripting every single word he said, pausing the video every 2 minutes, eventually rewinding it back. But that was not enoguh, I had to cross-check all what I thought I had understood in English, with a series of scrennshots of all displayed files in a 6 hours video. 
+As a ground example, I learned everything about PXE booting, out of a 6 hours youtube video from an Indian man. The sound was so low quality, I had to first spend 3 days transcripting every single word he said, pausing the video every 2 minutes, eventually rewinding it back. But that was not enoguh, I had to cross-check all what I thought I had understood in English, with a series of scrennshots of all displayed files in a 6 hours video. 
 Then I started to understand redhat's docuementation, could setup some tests, and go fruther with much more Linux knowledge. I ended up understanding jumping to studying what is U-boot, GRUB, LILO, and the conept of a bootloader.
 
 Believe it or not, derypting a secret from a dark Indian video, is much more exicting than expected: I learned that I love being there, where almost no one can help you, and you have to invoke the power of Human Mind, pour [l'honneur de l'esprit humain](https://unspod.unice.fr/video/4799-ja-dieudonne-pour-lhonneur-de-lesprit-humain-les-mathematiques-aujourdhui-apostrophe/).
