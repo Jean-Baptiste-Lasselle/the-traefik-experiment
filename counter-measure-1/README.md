@@ -41,6 +41,7 @@ You just never knew.
 
 * NIST (National Vulnerability Database) https://nvd.nist.gov/config/cce/index
 * And many more : Choose them in the list of country as long as possible, and choose a combination of countries that really can't get along with each other. In those countries, find Security Risk Registries. These will reference different attacks, if you look at Secruity Risk Registries like governements do. Add 7 more countries (sec risk registries), and you're pretty sure you'll end up with something like what we have got in Europe, which some people put in place, against the vote of majority (known as "European Union")  : Something really easy to manage, like sheeps with dogs.
+* And many, many more : there exists today, great things, called "Risk Registries Wrappers", such as https://github.com/toolswatch/vFeed . Check that repo, you'll immediatly understand what it consists in. If you need it, know that I am not the only IT guy in the world, automating security updates, based on registry entries (meaning I dont browse or any of my engineers, those registries. Our robots do that for us, and we human, monitor our robots with sweet care).
 
 
 #### Post Scriptum
