@@ -206,22 +206,30 @@ A few paragraphs above, I desribed the process as such (replace Traefik by any s
 * That random SALT will randomly change every time we add a new user, but the SALT has always a fixed number of characters. The characters are picked amongst the set [a-zA-Z0-9./] That number of characters is a security parameter that HAS importance. So we'll have to check if we can configure that parameter's valeu in Traefik, or if at least, Traefik supports upgrading SALT size according to standards, accross releases. If not clear, the longer a SALT is, the stronger security is.
 * So let's say this time Traefik generated the string `Xkt/S`, assuming SALT size is confgured to 5. 
 * Then, Traefik will append or prepend the SALT, to the clear password, like that : `mickeymouseXkt\S@`
-* Then, and only then, Traefik will use a software capable of hashing with SHA-512 algorithm, to hash `mickeymouseXkt\S@`. Traefik then gets a big long string that I will node as `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT`
-* Traefik wil then store in database, not `$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT`, but this exact value : 
+* Then, and only then, Traefik will use a software capable of hashing with SHA-512 algorithm, to hash `mickeymouseXkt\S@`. Traefik then gets a big long string that I will node as `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`
+* Traefik wil then store in database, not `$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`, but this exact value : 
 ```bash
 $6$Xkt/S$BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT
 ```
  -> Note that the dollar `$` chracter is not in  the set [a-zA-Z0-9./]
- -> The `6` between the first two dollars indicates that `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT` was hashed with SHA-512 algorithm. If the value had been `5`, then Traefik (or any software knowinfg about SALT standards ) knows `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_PASSWORD_PLUS_SALT` was hashed with `SHA-256`. 
-* When my friend `tintin` will log on to Traefik, he will type his username and the password I gave him, that is to say `mickeymouse`. But let's say Tintin is a bit of a hit on girls so he was speaking with a georgous Brazilian Lady, and typed worng. He typed `wowsheswow` (He is French) 
-* Traefik will lookup the database for the `tintin` username, and find the hashed password he has stored like cheese in a database. Reading that hashed passwords, and aware of the SALT standards, Treafik will read :
-  * `$6$` Oh, okay, so the passwords are HASHED with `SHA-512`
-  * `$6$Xkt/S$` Oh, okay, so the passwords are HASHED with `SHA-512`, and whan I created this user, I generated and used the string `6$Xkt/S` as a SALT
-* clear text password as I typed it: `mickeymouse`.
-* 
-* Traefik hashes htat clear text pasword, adds a randombut does not hash the password I type
+ -> The `6` between the first two dollars indicates that `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with SHA-512 algorithm. If the value had been `5`, then Traefik (or any software knowinfg about SALT standards ) knows `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` was hashed with `SHA-256`. 
+* When my friend `tintin` will log on to Traefik, he will type his username and the password I gave him, that is to say `mickeymouse`. But let's say Tintin is a bit of a hit on girls so he was speaking with a georgous Brazilian Lady, and typed worng. He typed `ohmyisbrazilparadise?` (He is French, you know...) 
+* Traefik will lookup the database for the `tintin` username, and find the hashed password he has stored like cheese in the database. Reading that hashed passwords, and aware of the SALT standards, Traefik will read :
+  * `$6$` (Traefik speaking) Oh, okay, so the passwords are HASHED with `SHA-512`
+  * `$6$Xkt/S$` (Traefik speaking) Oh, okay, so the passwords are HASHED with `SHA-512`, and whan I created this user, I generated and used the string `6$Xkt/S` as a SALT
+  * (Traefik speaking) Great so let me check the paswword `tintin` typed, now.
+* Then, Traefik hashes with SHA-512, the string composed of the password my friend tintin typed, with the SALT he recovered from database, so exactly : `ohmyisbrazilparadise?` + `Xkt/S` => `ohmyisbrazilparadise?Xkt/S`
+* Finally, Traefik compares the result of hashing `ohmyisbrazilparadise` with `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT`
+* Since my friend tintin typed a wrong password, the result of hashing `ohmyisbrazilparadise` will for sure be different from  `BIG_LONG_STRING_RESULT_OF_HASHING_CLEAR_LEGITIMATE_PASSWORD_PLUS_SALT` (that how HASH algorithms are desinged, considering proability theory and a bit of Groups theory, if you're interested)
+* So traefik will kick out my friend tintin
+* Do I need to eplain what will happen if `tintin` typed the correct password?
 
+All in all, ifou work about that authentication / crypto lifecycle, you will then come the same conculsion as mine :
+* we dont need anything else than `sha512sum`, to generate ourselfves ONE (one is very important here) legitimate Traefik user passwords.
+* we only need to pre-pend `$6$` and use any string that has same size has the size of the salt generated in Digital Ocean's Tutorial (if it works for them, it will work for us)
+* Okay let's do that, and bear in mind : If we were to generate a whole set of users, using only `sha512sum` utility, we would also need a random string generator. Choosing a good string randomizer is another issue we will have to review in our weekly/monthly ISO 27 000 review meeting.
 
+(Oh damn, I dying to try that tomorrow morning)
 
 Let me quote something I found in Brazilian discussion feed (I think I like Brazil ... ) : 
 > 
