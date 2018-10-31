@@ -112,8 +112,10 @@ Then the integrity test is OK iff the big string output by the above command, is
 
 KISS => "Keep it simple and stupid".
 Oh, switching from htpsswd Apache utility made us grab two additional wins for our customer : 
-* WIN 1 Apache License is crap, Linux' is GNU GPL v2 licence, and so is `sha512sum`;
-* WIN 2 we have one less dependency in our infrastructure (the less, the better)
+* **WIN 1** Apache License is crap, Linux' is GNU GPL v2 licence, and so is `sha512sum`;
+* **WIN 2** we have one less dependency in our infrastructure (the less, the better)
+* **WIN 3** we have avoided using Apache2, which is so old and well-known, That I bet many a balck hat hacker loves attacking Apache2, because it's sowell docuemented, and there are so many smarty-pants devlopers around the world, who on best case, follow line by line, Digital Ocean 's instructions/tutorials. Apahhe 2 ? It's just Christmas. 
+
 Thank you All Linux/UNIX Community around the world for 60 years!
 
 Alright, lets Bourne back:
