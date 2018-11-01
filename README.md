@@ -177,9 +177,10 @@ Yeaaaah! [ We win!](https://www.youtube.com/watch?v=B_dX0Nei538) (:Full Metal Ja
 ```bourne
 [jbl@pc-100 ~]$ export VOTRE_CHOIX_DE_MOT_DE_PASSE=mickeymouse
 [jbl@pc-100 ~]$ echo "$VOTRE_CHOIX_DE_MOT_DE_PASSE"^>> ./please-sha512sum-software-hash-my-mickey.txt
-[jbl@pc-100 ~]$ sha512sum -t ./please-sha512sum-software-hash-my-mickey.txt
+[jbl@pc-100 ~]$ sha512sum -t ./please-sha512sum-software-hash-my-mickey.txt >> ./sha512sum-i-likeu-be-informed-myhecksum-is-in-this-file.idowhateveriwantwithlinux
+[jbl@pc-100 ~]$ cat ./sha512sum-i-likeu-be-informed-myhecksum-is-in-this-file.idowhateveriwantwithlinux
 eac315c3e0519f89b8ca39917f4a8ad3ad3380daf8173c9726d450c65d48bf9b85a3ddebf6c10aae32e8aba5a3b6ec6dcfe9bf33ca09a0904e875d4d10274ec0  ./please-sha512sum-software-hash-my-mickey.txt
-[jbl@pc-100 ~]$ 
+[jbl@pc-100 ~]$ sha512sum -c ./sha512sum-i-likeu-be-informed-myhecksum-is-in-this-file.idowhateveriwantwithlinux
 ```
 (=> Ouh, and isn't that code we can write in a file, and .. version?? :) )
 Alright, now let's just be clear about what's gonna happen to that hash : 
