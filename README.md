@@ -72,7 +72,7 @@ htpasswd -nb admin $VOTRE_CHOIX_DE_MOT_DE_PASSE
 
 # 3. 
 ```
-Okay, let's google, `How to SHA-512 with htpasswd` ... Ouch, I am afraid htpasswd does not support SHA-512, even worst, it does not even support SHA-256... Meaning idf Digital Ocean 's customer folow their instructions, well, let's say they are sheeps swiming in a room full of wolves.
+Okay, let's google, `How to SHA-512 with htpasswd` ... Result: Ouch, I am afraid `htpasswd` does not support SHA-512, even worse, it does not even support SHA-256... Meaning if Digital Ocean 's customer folow their instructions, well, let's say they are sheeps swiming in a room full of wolves.
 Let Digital Ocean deal with their customers, and get back to our customer.Right, So dgitial Ocean's htpasswd suggestion for securing Traefik: forget aboput it, let's find somethign better.
 Google again, and soon, you find Most Llinux distribution include utilities such as `sha512sum` , or `sha394sum` ... And there, we're talking about packages include in most respected Linux distributions, like Redhat's or OpenSUSE. And believe me, Redhat guys' tests are rock solid. Actually, Linux is Rock Solid.
 Those utilities are there because Redhat guys did the same security analysis as I just did, leading to the exact same unavoidable conclusion. You've ever heard about the `KISS` principle (I am think about coming out with a French KISS principle)? Well if you've never heard about it, just see it in action :
